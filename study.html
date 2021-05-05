@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var emailArray = ["kim@naver.com", "sung@hanmail.net", "park@ikosmo.co.kr"];
+var getDomainStr = function(emailArr){
+	 //이부분을 구현하시오.   
+     var idx = 0;
+     for(var i =0; i<emailArray.length;i++){
+         for(var j=0; j<emailArray[i].length;j++){
+             if(emailArray[i].charAt=='@'){
+                 var at =j;
+             }
+             if(emailArray[i].charAt=='.') {
+                 var dot = j;
+             }
+
+         }
+         document.write(emailArray[i].substr(at+1,dot));
+     }
+}
+document.write("<h2>연습문제>도메인 추출하기</h2>");
+getDomainStr(emailArray)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
